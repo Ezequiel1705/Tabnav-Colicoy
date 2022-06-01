@@ -7,7 +7,7 @@ const formatDay = (time) => {
     return date.toLocaleDateString();
 }
 
-const OrderItem = () => {
+const OrderItem = ({item}) => {
   return (
     <View style={styles.order}>
       <View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         margin: 10,
-        borderColor: colors.beige,
+        borderColor: Colors.beige,
         borderWidth: 1,
         borderRadius: 6,
     },

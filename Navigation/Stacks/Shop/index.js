@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import { NavigationContainer, TabRouter } from '@react-navigation/native';
 import CategoriesScreens from '../../../Screens/CategoriesScreens';
 import ProductsScreen from '../../../Screens/ProductsScreen';
 import DetailScreens from '../../../Screens/DetailScreens';
@@ -23,8 +23,9 @@ import { Colors } from '../../../Styles/Colors';
                   fontFamily: 'Koulen',
                   fontSize: 26,
                 },
-                headerTitleAlign: "center"
-,              }}
+                headerTitleAlign: "center",
+
+              }}
         >
           <Stack.Screen 
             name="Categories" 
@@ -41,7 +42,9 @@ import { Colors } from '../../../Styles/Colors';
             options = { ({route}) => ({
               title: route.params.categoryTitle,
               headerStyle: {
-                backgroundColor: route.params.categoryTitle === "Ropa" ? Colors.regularBlue : Colors.darkBlue
+                backgroundColor: route.params.categoryTitle === "Ropa" ? Colors.regularBlue : 
+                  route.params.categoryTitle === "Electónica" ? "black" :
+                    Colors.darkBlue 
               }
             })
           }
@@ -50,7 +53,8 @@ import { Colors } from '../../../Styles/Colors';
             name = "Detail" 
             component={DetailScreens}
             options = { ({route}) => ({
-              title: route.params.productTitle
+              title: route.params.productTitle,
+              headerTintColor: 'red',
             })} 
           />
         </Stack.Navigator>

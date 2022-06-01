@@ -40,8 +40,7 @@ const CategoriesScreens = ({navigation}) => {
 
 
   return (
-    <> 
-        {/*<Header />*/}
+    
             <View style={styles.container}>
                 <Searcher additionalStyles={{
                     backgroundColor: Colors.lightBlue
@@ -63,7 +62,7 @@ const CategoriesScreens = ({navigation}) => {
                 </View>
                 
             </View>
-    </>
+    
   )
 }
 
@@ -85,4 +84,7 @@ const styles = StyleSheet.create({
         color: 'white',
         height: 50,
     },
+    listContainer:{
+        flex: 1,
+    }
 })

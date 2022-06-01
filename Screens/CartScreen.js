@@ -50,5 +50,26 @@ const styles = StyleSheet.create({
   },
   list: {
     flex: 1,
+  },
+  footer: {
+    padding: 12,
+    borderTopColor: Colors.beige,
+    borderTopWidth: 1,
+  },
+  confirm: {
+    backgroundColor: Colors.beige,
+    borderRadius: 10,
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  total: {
+    flexDirection: 'row',
+  },
+  text: {
+    fontSize: 18,
+    fontFamily: 'LatoRegular',
+    padding: 8
   }
 })
